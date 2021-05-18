@@ -1,7 +1,5 @@
 from flask import Flask, request, send_file
 import os
-import glob
-import sys
 import csv
 
 app = Flask(__name__)
