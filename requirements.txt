@@ -5,7 +5,7 @@ itsdangerous==2.0.0
 Jinja2==3.0.0
 MarkupSafe==2.0.0
 pip==21.0.1
-setuptools==52.0.0.post20210125
+setuptools==49.2.0.post20200714
 Werkzeug==1.0.1
 wheel==0.36.2
 wincertstore==0.2
