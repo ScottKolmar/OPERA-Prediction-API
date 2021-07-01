@@ -39,15 +39,9 @@ def predict_logBCF():
             f.close()
 
         # Run opera command Docker
-        # precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
-        # command = ' -s {} -o {} -logBCF -c'.format(inputfilepath, outputfilepath)
-        # os.system(precommand + command)
-
-        # Run opera command local
-        os.chdir(relpath)
-        command = 'opera -s {} -o {} -logBCF -c'.format(inputfilepath, outputfilepath)
-        os.system(command)
-        os.chdir(projpath)
+        precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
+        command = ' -s {} -o {} -logBCF -c'.format(inputfilepath, outputfilepath)
+        os.system(precommand + command)
 
         # Read prediction from output
         with open(outputfilepath, 'r') as f:
@@ -104,15 +98,9 @@ def predict_BP():
             f.close()
 
         # Run opera command Docker
-        # precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
-        # command = ' -s {} -o {} -logBCF -c'.format(inputfilepath, outputfilepath)
-        # os.system(precommand + command)
-
-        # Run opera command local
-        os.chdir(relpath)
-        command = 'opera -s {} -o {} -BP -c'.format(inputfilepath, outputfilepath)
-        os.system(command)
-        os.chdir(projpath)
+        precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
+        command = ' -s {} -o {} -logBCF -c'.format(inputfilepath, outputfilepath)
+        os.system(precommand + command)
 
         # Read prediction from output
         with open(outputfilepath, 'r') as f:
@@ -169,15 +157,9 @@ def predict_logP():
             f.close()
 
         # Run opera command Docker
-        # precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
-        # command = ' -s {} -o {} -logP -c'.format(inputfilepath, outputfilepath)
-        # os.system(precommand + command)
-
-        # Run opera command local
-        os.chdir(relpath)
-        command = 'opera -s {} -o {} -logP -c'.format(inputfilepath, outputfilepath)
-        os.system(command)
-        os.chdir(projpath)
+        precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
+        command = ' -s {} -o {} -logP -c'.format(inputfilepath, outputfilepath)
+        os.system(precommand + command)
 
         # Read prediction from output
         with open(outputfilepath, 'r') as f:
@@ -234,15 +216,9 @@ def predict_MP():
             f.close()
 
         # Run opera command Docker
-        # precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
-        # command = ' -s {} -o {} -MP -c'.format(inputfilepath, outputfilepath)
-        # os.system(precommand + command)
-
-        # Run opera command local
-        os.chdir(relpath)
-        command = 'opera -s {} -o {} -MP -c'.format(inputfilepath, outputfilepath)
-        os.system(command)
-        os.chdir(projpath)
+        precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
+        command = ' -s {} -o {} -MP -c'.format(inputfilepath, outputfilepath)
+        os.system(precommand + command)
 
         # Read prediction from output
         with open(outputfilepath, 'r') as f:
@@ -299,15 +275,9 @@ def predict_VP():
             f.close()
 
         # Run opera command Docker
-        # precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
-        # command = ' -s {} -o {} -VP -c'.format(inputfilepath, outputfilepath)
-        # os.system(precommand + command)
-
-        # Run opera command local
-        os.chdir(relpath)
-        command = 'opera -s {} -o {} -VP -c'.format(inputfilepath, outputfilepath)
-        os.system(command)
-        os.chdir(projpath)
+        precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
+        command = ' -s {} -o {} -VP -c'.format(inputfilepath, outputfilepath)
+        os.system(precommand + command)
 
         # Read prediction from output
         with open(outputfilepath, 'r') as f:
@@ -364,15 +334,9 @@ def predict_WS():
             f.close()
 
         # Run opera command Docker
-        # precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
-        # command = ' -s {} -o {} -WS -c'.format(inputfilepath, outputfilepath)
-        # os.system(precommand + command)
-
-        # Run opera command local
-        os.chdir(relpath)
-        command = 'opera -s {} -o {} -WS -c'.format(inputfilepath, outputfilepath)
-        os.system(command)
-        os.chdir(projpath)
+        precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
+        command = ' -s {} -o {} -WS -c'.format(inputfilepath, outputfilepath)
+        os.system(precommand + command)
 
         # Read prediction from output
         with open(outputfilepath, 'r') as f:
@@ -429,15 +393,9 @@ def predict_AOH():
             f.close()
 
         # Run opera command Docker
-        # precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
-        # command = ' -s {} -o {} -AOH -c'.format(inputfilepath, outputfilepath)
-        # os.system(precommand + command)
-
-        # Run opera command local
-        os.chdir(relpath)
-        command = 'opera -s {} -o {} -AOH -c'.format(inputfilepath, outputfilepath)
-        os.system(command)
-        os.chdir(projpath)
+        precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
+        command = ' -s {} -o {} -AOH -c'.format(inputfilepath, outputfilepath)
+        os.system(precommand + command)
 
         # Read prediction from output
         with open(outputfilepath, 'r') as f:
@@ -494,15 +452,9 @@ def predict_BioDeg():
             f.close()
 
         # Run opera command Docker
-        # precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
-        # command = ' -s {} -o {} -BioDeg -c'.format(inputfilepath, outputfilepath)
-        # os.system(precommand + command)
-
-        # Run opera command local
-        os.chdir(relpath)
-        command = 'opera -s {} -o {} -BioDeg -c'.format(inputfilepath, outputfilepath)
-        os.system(command)
-        os.chdir(projpath)
+        precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
+        command = ' -s {} -o {} -BioDeg -c'.format(inputfilepath, outputfilepath)
+        os.system(precommand + command)
 
         # Read prediction from output
         with open(outputfilepath, 'r') as f:
@@ -559,15 +511,9 @@ def predict_RB():
             f.close()
 
         # Run opera command Docker
-        # precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
-        # command = ' -s {} -o {} -RB -c'.format(inputfilepath, outputfilepath)
-        # os.system(precommand + command)
-
-        # Run opera command local
-        os.chdir(relpath)
-        command = 'opera -s {} -o {} -RB -c'.format(inputfilepath, outputfilepath)
-        os.system(command)
-        os.chdir(projpath)
+        precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
+        command = ' -s {} -o {} -RB -c'.format(inputfilepath, outputfilepath)
+        os.system(precommand + command)
 
         # Read prediction from output
         with open(outputfilepath, 'r') as f:
@@ -624,15 +570,9 @@ def predict_HL():
             f.close()
 
         # Run opera command Docker
-        # precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
-        # command = ' -s {} -o {} -HL -c'.format(inputfilepath, outputfilepath)
-        # os.system(precommand + command)
-
-        # Run opera command local
-        os.chdir(relpath)
-        command = 'opera -s {} -o {} -HL -c'.format(inputfilepath, outputfilepath)
-        os.system(command)
-        os.chdir(projpath)
+        precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
+        command = ' -s {} -o {} -HL -c'.format(inputfilepath, outputfilepath)
+        os.system(precommand + command)
 
         # Read prediction from output
         with open(outputfilepath, 'r') as f:
@@ -689,15 +629,9 @@ def predict_KM():
             f.close()
 
         # Run opera command Docker
-        # precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
-        # command = ' -s {} -o {} -KM -c'.format(inputfilepath, outputfilepath)
-        # os.system(precommand + command)
-
-        # Run opera command local
-        os.chdir(relpath)
-        command = 'opera -s {} -o {} -KM -c'.format(inputfilepath, outputfilepath)
-        os.system(command)
-        os.chdir(projpath)
+        precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
+        command = ' -s {} -o {} -KM -c'.format(inputfilepath, outputfilepath)
+        os.system(precommand + command)
 
         # Read prediction from output
         with open(outputfilepath, 'r') as f:
@@ -754,15 +688,9 @@ def predict_KOA():
             f.close()
 
         # Run opera command Docker
-        # precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
-        # command = ' -s {} -o {} -KOA -c'.format(inputfilepath, outputfilepath)
-        # os.system(precommand + command)
-
-        # Run opera command local
-        os.chdir(relpath)
-        command = 'opera -s {} -o {} -KOA -c'.format(inputfilepath, outputfilepath)
-        os.system(command)
-        os.chdir(projpath)
+        precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
+        command = ' -s {} -o {} -KOA -c'.format(inputfilepath, outputfilepath)
+        os.system(precommand + command)
 
         # Read prediction from output
         with open(outputfilepath, 'r') as f:
@@ -819,15 +747,9 @@ def predict_Koc():
             f.close()
 
         # Run opera command Docker
-        # precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
-        # command = ' -s {} -o {} -Koc -c'.format(inputfilepath, outputfilepath)
-        # os.system(precommand + command)
-
-        # Run opera command local
-        os.chdir(relpath)
-        command = 'opera -s {} -o {} -Koc -c'.format(inputfilepath, outputfilepath)
-        os.system(command)
-        os.chdir(projpath)
+        precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
+        command = ' -s {} -o {} -Koc -c'.format(inputfilepath, outputfilepath)
+        os.system(precommand + command)
 
         # Read prediction from output
         with open(outputfilepath, 'r') as f:
@@ -884,15 +806,9 @@ def predict_RT():
             f.close()
 
         # Run opera command Docker
-        # precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
-        # command = ' -s {} -o {} -RT -c'.format(inputfilepath, outputfilepath)
-        # os.system(precommand + command)
-
-        # Run opera command local
-        os.chdir(relpath)
-        command = 'opera -s {} -o {} -RT -c'.format(inputfilepath, outputfilepath)
-        os.system(command)
-        os.chdir(projpath)
+        precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
+        command = ' -s {} -o {} -RT -c'.format(inputfilepath, outputfilepath)
+        os.system(precommand + command)
 
         # Read prediction from output
         with open(outputfilepath, 'r') as f:
@@ -949,15 +865,9 @@ def predict_pKa():
             f.close()
 
         # Run opera command Docker
-        # precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
-        # command = ' -s {} -o {} -pKa -c'.format(inputfilepath, outputfilepath)
-        # os.system(precommand + command)
-
-        # Run opera command local
-        os.chdir(relpath)
-        command = 'opera -s {} -o {} -pKa -c'.format(inputfilepath, outputfilepath)
-        os.system(command)
-        os.chdir(projpath)
+        precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
+        command = ' -s {} -o {} -pKa -c'.format(inputfilepath, outputfilepath)
+        os.system(precommand + command)
 
         # Read prediction from output
         with open(outputfilepath, 'r') as f:
@@ -1014,15 +924,9 @@ def predict_logD():
             f.close()
 
         # Run opera command Docker
-        # precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
-        # command = ' -s {} -o {} -logD -c'.format(inputfilepath, outputfilepath)
-        # os.system(precommand + command)
-
-        # Run opera command local
-        os.chdir(relpath)
-        command = 'opera -s {} -o {} -logD -c'.format(inputfilepath, outputfilepath)
-        os.system(command)
-        os.chdir(projpath)
+        precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
+        command = ' -s {} -o {} -logD -c'.format(inputfilepath, outputfilepath)
+        os.system(precommand + command)
 
         # Read prediction from output
         with open(outputfilepath, 'r') as f:
@@ -1079,15 +983,9 @@ def predict_CERAPP():
             f.close()
 
         # Run opera command Docker
-        # precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
-        # command = ' -s {} -o {} -CERAPP -c'.format(inputfilepath, outputfilepath)
-        # os.system(precommand + command)
-
-        # Run opera command local
-        os.chdir(relpath)
-        command = 'opera -s {} -o {} -CERAPP -c'.format(inputfilepath, outputfilepath)
-        os.system(command)
-        os.chdir(projpath)
+        precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
+        command = ' -s {} -o {} -CERAPP -c'.format(inputfilepath, outputfilepath)
+        os.system(precommand + command)
 
         # Read prediction from output
         with open(outputfilepath, 'r') as f:
@@ -1144,15 +1042,9 @@ def predict_CoMPARA():
             f.close()
 
         # Run opera command Docker
-        # precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
-        # command = ' -s {} -o {} -CoMPARA -c'.format(inputfilepath, outputfilepath)
-        # os.system(precommand + command)
-
-        # Run opera command local
-        os.chdir(relpath)
-        command = 'opera -s {} -o {} -CoMPARA -c'.format(inputfilepath, outputfilepath)
-        os.system(command)
-        os.chdir(projpath)
+        precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
+        command = ' -s {} -o {} -CoMPARA -c'.format(inputfilepath, outputfilepath)
+        os.system(precommand + command)
 
         # Read prediction from output
         with open(outputfilepath, 'r') as f:
@@ -1209,15 +1101,9 @@ def predict_CATMOs():
             f.close()
 
         # Run opera command Docker
-        # precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
-        # command = ' -s {} -o {} -CATMOs -c'.format(inputfilepath, outputfilepath)
-        # os.system(precommand + command)
-
-        # Run opera command local
-        os.chdir(relpath)
-        command = 'opera -s {} -o {} -CATMOs -c'.format(inputfilepath, outputfilepath)
-        os.system(command)
-        os.chdir(projpath)
+        precommand = './../usr/local/bin/OPERA/application/run_OPERA.sh ../usr/local/MATLAB/MATLAB_Runtime/v94'
+        command = ' -s {} -o {} -CATMOs -c'.format(inputfilepath, outputfilepath)
+        os.system(precommand + command)
 
         # Read prediction from output
         with open(outputfilepath, 'r') as f:
