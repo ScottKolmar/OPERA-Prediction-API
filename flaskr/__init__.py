@@ -59,7 +59,7 @@ def create_app(test_config=None):
                 'Clint'
                 ]
 
-            if prediction not in prediction_tag_list:
+            if prediction_tag not in prediction_tag_list:
                 abort(422)
 
             # Extract SMILES string
