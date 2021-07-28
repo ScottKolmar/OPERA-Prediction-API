@@ -20,7 +20,7 @@ image = str(image_output.split()[8]).split("'")[1]
 print(image)
 
 # Run the docker container from docker image
-docker_run = f'docker run -e FLASK_APP=flaskr -p 5000:5000 -d -it {image}'
+docker_run = f'docker run -e FLASK_APP=flaskr -p {args.port}:5000 -d -it {image}'
 os.system(docker_run)
 
 # Get container name
