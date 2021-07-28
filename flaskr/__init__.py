@@ -103,7 +103,7 @@ def create_app(test_config=None):
     
     # Error Handlers
     @app.errorhandler(404)
-    def unprocessable_request(404):
+    def unprocessable_request(error):
         return jsonify({
             "success": False,
             "error": 404,
@@ -111,7 +111,7 @@ def create_app(test_config=None):
         })
 
     @app.errorhandler(422)
-    def unprocessable_request(422):
+    def unprocessable_request(error):
         return jsonify({
             "success": False,
             "error": 422,
