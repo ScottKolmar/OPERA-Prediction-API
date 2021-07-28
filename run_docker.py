@@ -20,6 +20,19 @@ os.system(docker_run)
 container_output = subprocess.check_output(['docker', 'container', 'ls'])
 container = str(container_output.split()[8]).split("'")[1]
 
-# Start flask
-docker_exec = f'docker exec {container} flask run -h 0.0.0.0 -p 5000'
+# Extract optional parameters
+if len(sys.argv) == 1:
+    host_url = '0.0.0.0'
+    port_num = '5000'
+
+elif len(sys.argv) == 2:
+    host_url = sys.argv[1]
+    port_num = '5000'
+
+elif len(sys.argv) == 3:
+    host_url = sys.argv[1]
+    port_num = sys.argv[2]
+
+# Start Flask
+docker_exec = f'docker exec {container} flask run -h {host_url} -p {port_num}'
 os.system(docker_exec)
