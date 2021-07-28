@@ -1,0 +1,1014 @@
+{
+	"info": {
+		"_postman_id": "e4ef9d8b-5abc-4550-92e0-b9a7ba181357",
+		"name": "pf_OPERA-prediction",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Home",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Status code is 200', function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Message is correct\", () => {\r",
+							"  const responseJson = pm.response.json();\r",
+							"  pm.expect(responseJson.message).to.eql(\"Welcome to the OPERA Prediction Microservice.\");\r",
+							"  pm.expect(responseJson.success).to.eql(true);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logBCF",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Status code is 200', function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Prediction is correct\", () => {\r",
+							"  const responseJson = pm.response.json();\r",
+							"  pm.expect(responseJson.prediction).to.eql(\"0.71\");\r",
+							"  pm.expect(responseJson.success).to.eql(true);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/logBCF?smiles=CCC",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"logBCF"
+					],
+					"query": [
+						{
+							"key": "smiles",
+							"value": "CCC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BP",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Status code is 200', function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Prediction is correct\", () => {\r",
+							"  const responseJson = pm.response.json();\r",
+							"  pm.expect(responseJson).to.have.property('prediction');\r",
+							"  pm.expect(responseJson.success).to.eql(true);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/BP?smiles=CCC",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"BP"
+					],
+					"query": [
+						{
+							"key": "smiles",
+							"value": "CCC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logP",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Status code is 200', function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Prediction is correct\", () => {\r",
+							"  const responseJson = pm.response.json();\r",
+							"  pm.expect(responseJson).to.have.property('prediction');\r",
+							"  pm.expect(responseJson.success).to.eql(true);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/logP?smiles=CCC",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"logP"
+					],
+					"query": [
+						{
+							"key": "smiles",
+							"value": "CCC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MP",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Status code is 200', function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Prediction is correct\", () => {\r",
+							"  const responseJson = pm.response.json();\r",
+							"  pm.expect(responseJson).to.have.property('prediction');\r",
+							"  pm.expect(responseJson.success).to.eql(true);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/MP?smiles=CCC",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"MP"
+					],
+					"query": [
+						{
+							"key": "smiles",
+							"value": "CCC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VP",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Status code is 200', function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Prediction is correct\", () => {\r",
+							"  const responseJson = pm.response.json();\r",
+							"  pm.expect(responseJson).to.have.property('prediction');\r",
+							"  pm.expect(responseJson.success).to.eql(true);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/VP?smiles=CCC",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"VP"
+					],
+					"query": [
+						{
+							"key": "smiles",
+							"value": "CCC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logVP",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Status code is 200', function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Prediction is correct\", () => {\r",
+							"  const responseJson = pm.response.json();\r",
+							"  pm.expect(responseJson).to.have.property('prediction');\r",
+							"  pm.expect(responseJson.success).to.eql(true);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/logVP?smiles=CCC",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"logVP"
+					],
+					"query": [
+						{
+							"key": "smiles",
+							"value": "CCC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "WS",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Status code is 200', function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Prediction is correct\", () => {\r",
+							"  const responseJson = pm.response.json();\r",
+							"  pm.expect(responseJson).to.have.property('prediction');\r",
+							"  pm.expect(responseJson.success).to.eql(true);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/WS?smiles=CCC",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"WS"
+					],
+					"query": [
+						{
+							"key": "smiles",
+							"value": "CCC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AOH",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Status code is 200', function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Prediction is correct\", () => {\r",
+							"  const responseJson = pm.response.json();\r",
+							"  pm.expect(responseJson).to.have.property('prediction');\r",
+							"  pm.expect(responseJson.success).to.eql(true);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/AOH?smiles=CCC",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"AOH"
+					],
+					"query": [
+						{
+							"key": "smiles",
+							"value": "CCC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BioDeg",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Status code is 200', function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Prediction is correct\", () => {\r",
+							"  const responseJson = pm.response.json();\r",
+							"  pm.expect(responseJson).to.have.property('prediction');\r",
+							"  pm.expect(responseJson.success).to.eql(true);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/BioDeg?smiles=CCC",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"BioDeg"
+					],
+					"query": [
+						{
+							"key": "smiles",
+							"value": "CCC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RB",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Status code is 200', function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Prediction is correct\", () => {\r",
+							"  const responseJson = pm.response.json();\r",
+							"  pm.expect(responseJson).to.have.property('prediction');\r",
+							"  pm.expect(responseJson.success).to.eql(true);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/RB?smiles=CCC",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"RB"
+					],
+					"query": [
+						{
+							"key": "smiles",
+							"value": "CCC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReadyBiodeg",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Status code is 200', function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Prediction is correct\", () => {\r",
+							"  const responseJson = pm.response.json();\r",
+							"  pm.expect(responseJson).to.have.property('prediction');\r",
+							"  pm.expect(responseJson.success).to.eql(true);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/ReadyBiodeg?smiles=CCC",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"ReadyBiodeg"
+					],
+					"query": [
+						{
+							"key": "smiles",
+							"value": "CCC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HL",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Status code is 200', function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Prediction is correct\", () => {\r",
+							"  const responseJson = pm.response.json();\r",
+							"  pm.expect(responseJson).to.have.property('prediction');\r",
+							"  pm.expect(responseJson.success).to.eql(true);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/HL?smiles=CCC",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"HL"
+					],
+					"query": [
+						{
+							"key": "smiles",
+							"value": "CCC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logHL",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Status code is 200', function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Prediction is correct\", () => {\r",
+							"  const responseJson = pm.response.json();\r",
+							"  pm.expect(responseJson).to.have.property('prediction');\r",
+							"  pm.expect(responseJson.success).to.eql(true);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/logHL?smiles=CCC",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"logHL"
+					],
+					"query": [
+						{
+							"key": "smiles",
+							"value": "CCC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "KM",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Status code is 200', function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Prediction is correct\", () => {\r",
+							"  const responseJson = pm.response.json();\r",
+							"  pm.expect(responseJson).to.have.property('prediction');\r",
+							"  pm.expect(responseJson.success).to.eql(true);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/KM?smiles=CCC",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"KM"
+					],
+					"query": [
+						{
+							"key": "smiles",
+							"value": "CCC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logKM",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Status code is 200', function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Prediction is correct\", () => {\r",
+							"  const responseJson = pm.response.json();\r",
+							"  pm.expect(responseJson).to.have.property('prediction');\r",
+							"  pm.expect(responseJson.success).to.eql(true);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/logKM?smiles=CCC",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"logKM"
+					],
+					"query": [
+						{
+							"key": "smiles",
+							"value": "CCC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "KOA",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Status code is 200', function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Prediction is correct\", () => {\r",
+							"  const responseJson = pm.response.json();\r",
+							"  pm.expect(responseJson).to.have.property('prediction');\r",
+							"  pm.expect(responseJson.success).to.eql(true);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/KOA?smiles=CCC",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"KOA"
+					],
+					"query": [
+						{
+							"key": "smiles",
+							"value": "CCC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Koc",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Status code is 200', function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Prediction is correct\", () => {\r",
+							"  const responseJson = pm.response.json();\r",
+							"  pm.expect(responseJson).to.have.property('prediction');\r",
+							"  pm.expect(responseJson.success).to.eql(true);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/Koc?smiles=CCC",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"Koc"
+					],
+					"query": [
+						{
+							"key": "smiles",
+							"value": "CCC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logKoc",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Status code is 200', function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Prediction is correct\", () => {\r",
+							"  const responseJson = pm.response.json();\r",
+							"  pm.expect(responseJson).to.have.property('prediction');\r",
+							"  pm.expect(responseJson.success).to.eql(true);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/logKoc?smiles=CCC",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"logKoc"
+					],
+					"query": [
+						{
+							"key": "smiles",
+							"value": "CCC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RT",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Status code is 200', function() {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Prediction is correct\", () => {\r",
+							"  const responseJson = pm.response.json();\r",
+							"  pm.expect(responseJson).to.have.property('prediction');\r",
+							"  pm.expect(responseJson.success).to.eql(true);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/RT?smiles=CCC",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"RT"
+					],
+					"query": [
+						{
+							"key": "smiles",
+							"value": "CCC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BadPredictTag",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Status code is 404', function() {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Prediction is correct\", () => {\r",
+							"  const responseJson = pm.response.json();\r",
+							"  pm.expect(responseJson.message).to.eql('Resource Not Found');\r",
+							"  pm.expect(responseJson.error).to.eql(404);\r",
+							"  pm.expect(responseJson.success).to.eql(false);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/BadPredictTag?smiles=CCC",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"BadPredictTag"
+					],
+					"query": [
+						{
+							"key": "smiles",
+							"value": "CCC"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "localhost:5000"
+		}
+	]
+}
