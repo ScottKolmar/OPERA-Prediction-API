@@ -45,18 +45,6 @@ def create_app(test_config=None):
                 'Koc',
                 'logKoc',
                 'RT',
-                'pKa',
-                'logD',
-                'CERAPP',
-                'ER',
-                'CoMPARA',
-                'AR',
-                'CATMoS',
-                'AcuteTox',
-                'Fu',
-                'FuB',
-                'Cl',
-                'Clint'
                 ]
 
             if prediction_tag not in prediction_tag_list:
