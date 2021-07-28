@@ -28,5 +28,5 @@ container_output = subprocess.check_output(['docker', 'container', 'ls'])
 container = str(container_output.split()[8]).split("'")[1]
 
 # Start Flask
-docker_exec = f'docker exec {container} flask run {args.hostname} {args.port}'
+docker_exec = f'docker exec {container} flask run -h {args.hostname} -p 5000'
 os.system(docker_exec)
