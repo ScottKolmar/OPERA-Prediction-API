@@ -60,7 +60,7 @@ def create_app(test_config=None):
                 ]
 
             if prediction_tag not in prediction_tag_list:
-                abort(422)
+                abort(404)
 
             # Extract SMILES string
             smiles = request.args.get('smiles')
@@ -108,7 +108,7 @@ def create_app(test_config=None):
             "success": False,
             "error": 404,
             "message": "Resource Not Found"
-        })
+        }), 404
 
     @app.errorhandler(422)
     def unprocessable_request(error):
@@ -116,6 +116,6 @@ def create_app(test_config=None):
             "success": False,
             "error": 422,
             "message": "Unprocessable Request"
-        })
+        }), 422
     
     return app
