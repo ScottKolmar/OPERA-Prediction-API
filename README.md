@@ -26,6 +26,7 @@ where the values between braces are your desired host and port.
 ## API Reference
 
 The API can be accessed at the following base URL: (http://127.0.0.1:5000/)
+If custom host name and port are supplied, the base URL will change accordingly.
 
 
 ### Endpoints
