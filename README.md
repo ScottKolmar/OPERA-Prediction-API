@@ -13,7 +13,15 @@ Documentation for the OPERA software, developed by Kamel Mansouri, can be found 
 The API is run via the Python package Flask from inside of a Docker container. Everything needed to build the Docker image, start the Docker container, and run the flask app is contained here.
 
 To build the Docker image, start the docker container, and run the flask app, apply the following commands:
+
 ``` python run_docker.py```
+
+The flask app will be run on default host 0.0.0.0 and port 5000.
+To run the flask app with a custom host URL and/or custom port number, give the command:
+
+``` python run_docker.py -h {custom_host} -p {custom_port}```
+
+where the values between braces are your desired host and port.
 
 ## API Reference
 
