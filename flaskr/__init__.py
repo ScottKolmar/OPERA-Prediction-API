@@ -69,7 +69,7 @@ def create_app(test_config=None):
             try:
                 # Run opera command
                 opera_shell = '../usr/local/bin/OPERA/application/run_OPERA.sh'
-                matlab_runtime = '..//usr/local/MATLAB/MATLAB_Runtime/v99'
+                matlab_runtime = '../usr/local/MATLAB/MATLAB_Runtime/v99'
                 command = f'./{opera_shell} {matlab_runtime} -s {inputfilepath} -o {outputfilepath} -{prediction_tag}'
                 os.system(command)
             
