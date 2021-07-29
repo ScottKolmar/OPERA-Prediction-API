@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:20.04
 
 WORKDIR /app
 
@@ -6,6 +6,9 @@ COPY . /app
 
 # Update apt
 RUN apt-get update
+
+# Install java runtime
+RUN { echo "Y"; echo "US"; echo "Eastern"; } | apt-get install default-jre
 
 # Install Curl
 RUN echo "Y" | apt install curl
