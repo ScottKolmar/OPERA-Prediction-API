@@ -56,7 +56,7 @@
 							"\r",
 							"pm.test(\"Prediction is correct\", () => {\r",
 							"  const responseJson = pm.response.json();\r",
-							"  pm.expect(responseJson.prediction).to.eql(\"0.71\");\r",
+							"  pm.expect(responseJson.prediction).to.eql(\"0.89\");\r",
 							"  pm.expect(responseJson.success).to.eql(true);\r",
 							"});\r",
 							""
